@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tuyết rơi</title>
+    <style>
+        .tuyet{
+            position: absolute;left: 0px;top: 0px;
+        }
+        .tuyetroi{padding-left:15px;
+            font-size:18px;
+            line-height:24px;
+            position:fixed;
+            color:#ebebeb;
+            user-select:none;
+            z-index:1000;
+            -moz-user-select:none;
+            -ms-user-select:none;
+            -khtml-user-select:none;
+            -webkit-user-select:none;
+            -webkit-touch-callout:none;}
+            body{background-color: rgb(228, 231, 231);}
+            .tuyetroi:hover{cursor:default;}
+    </style>
+</head>
+<body>
+   
+   
+        <div class="tuyet">
+
+            <p class="tuyetroi"></p>
+            
+                    </div>
+<script> 
+
+var requestAnimationFrame=window.requestAnimationFrame||window.mozRequestAnimationFrame||window.webkitRequestAnimationFrame||window.msRequestAnimationFrame;var transforms=["transform","msTransform","webkitTransform","mozTransform","oTransform"];var transformProperty=getSupportedPropertyName(transforms);var snowflakes=[];var browserWidth;var browserHeight;var numberOfSnowflakes=50;var resetPosition=false;function setup(){window.addEventListener("DOMContentLoaded",generateSnowflakes,false);window.addEventListener("resize",setResetFlag,false)}setup();function getSupportedPropertyName(b){for(var a=0;a<b.length;a++){if(typeof document.body.style[b[a]]!="undefined"){return b[a]}}return null}function Snowflake(b,a,d,e,c)
+{this.element=b;this.radius=a;this.speed=d;this.xPos=e;this.yPos=c;this.counter=0;this.sign=Math.random()<0.5?1:-1;
+this.element.style.opacity=0.5+Math.random();this.element.style.fontSize=4+Math.random()*30+"px"}Snowflake.prototype.update=function(){this.counter+=this.speed/5000;this.xPos+=this.sign*this.speed*Math.cos(this.counter)/40;this.yPos+=Math.sin(this.counter)/40+this.speed/30;setTranslate3DTransform(this.element,Math.round(this.xPos),Math.round(this.yPos));if(this.yPos>browserHeight){this.yPos=-50}};function setTranslate3DTransform(a,c,b){var d="translate3d("+c+"px, "+b+"px, 0)";a.style[transformProperty]=d}function generateSnowflakes(){var b=document.querySelector(".tuyetroi");var h=b.parentNode;browserWidth=document.documentElement.clientWidth;browserHeight=document.documentElement.clientHeight;for(var d=0;d<numberOfSnowflakes;d++){var j=b.cloneNode(true);h.appendChild(j);var e=getPosition(50,browserWidth);var a=getPosition(50,browserHeight);var c=5+Math.random()*40;var g=4+Math.random()*10;var f=new Snowflake(j,g,c,e,a);snowflakes.push(f)}h.removeChild(b);moveSnowflakes()}function moveSnowflakes(){for(var b=0;b<snowflakes.length;b++){var a=snowflakes[b];a.update()}if(resetPosition){browserWidth=document.documentElement.clientWidth;browserHeight=document.documentElement.clientHeight;for(var b=0;b<snowflakes.length;b++){var a=snowflakes[b];a.xPos=getPosition(50,browserWidth);a.yPos=getPosition(50,browserHeight)}resetPosition=false}requestAnimationFrame(moveSnowflakes)}function getPosition(b,a){return Math.round(-1*b+Math.random()*(a+2*b))}function setResetFlag(a){resetPosition=true};
+</script>
+
+</body>
+</html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu</title>
+  <link rel="stylesheet" href="./duan3.css">
+</head>
+<body>
+    <div class="banner">
+      <marquee behavior="alternate" direction="left"><p class="name_banner">Giới thiệu bản thân và quê hương </p></marquee>
+      
+    </div>
+    <div class="menu_web">
+      <div class="menu">
+        <ul class="root">
+          <li><a href="./Untitled-1.html" class="href">Trang chủ</a></li>
+          <li><a href="" class="href">Giới thiệu quê hương</a>
+            <ul class="submenu">
+              <li><a href="https://vinpearl.com/vi/vit-quay-lang-son-dac%20san-thom-ngon-nuc-tieng-gan-xa" class="href">Đặc sản</a></li>
+              <li><a href="https://vinpearl.com/vi/cam-nang-du-lich-mau-son-lang-son-chi-tiet-cho-nguoi-di-lan-dau" class="href">Điểm Du Lịch</a></li>
+           
+            </ul>
+         </a></li>
+        </ul>
+      </div>
+      <div class="noidung">
+        <table class="bocuc">
+            <tr class="h11">
+            <td class="sp1"><br>
+              <a href="https://vinpearl.com/vi/cam-nang-du-lich-mau-son-lang-son-chi-tiet-cho-nguoi-di-lan-dau">Du Lịch Mẫu Sơn </a><br>
+                  <a href="https://vinpearl.com/vi/vit-quay-lang-son-dac%20san-thom-ngon-nuc-tieng-gan-xa"> Đặc Sản Lạng Sơn</a><br>
+
+                
+               
+
+            </td>
+            <td class="sp1"><br>             
+               <img src="./pic/325088389_1632303053895971_3909745462738816576_n.jpg" width="450" height="200">
+              <p>Lê Văn Luân </p>
+              <p>Sinh ngày :21/08/2004</p>
+                <p>Nơi Sinh: Lâm ca - Đình Lập - Lạng Sơn </p><br>
+                Nơi ở hiện tại:34 Ngõ 21 Văn Nội  Phú Lương  Hà Đông Hà Nội<br>
+                Gia đình tôi có 3 người<br>
+                Hiện tại tôi đang theo học tại trường đại học Đại Nam ngành Công Nghệ Thông Tin K16<br>
+                <p>Tôi có sở thích,Đá Bóng,Chơi Game,và rất nhiều</p>
+                
+                <td class="sp1"><br>
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/rZ75ruX43Yk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                  <a href="https://dulichvn.net/wp-content/uploads/2021/08/ta-hien-ve-dem.png"><img src="./pic/rao-vat-732884.jpg" width="450" height="250"></a>
+
+
+
+        </tr>
+        
+
+        
+    </p>
+
+      </div>
+      <table>
+        <tr>
+          <td><p>&copy;Lê Văn Luân<p></td>
+        </tr>
+      </table>
